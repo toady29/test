@@ -5,7 +5,7 @@
 }
 
 body {
-    background-color: rgb(255, 163, 250);
+    background-color: rgb(255, 188, 252);
 }
 
 nav {
@@ -13,7 +13,7 @@ nav {
     margin: auto;
     top: 15px;
     position: relative;
-    height: 60px;
+    height: fit-content;
     width: fit-content;
     background-color: rgba(255, 255, 255, 0.5);
     border-radius: 25px;
@@ -22,22 +22,48 @@ nav {
 }
 
 #title {
-    padding: 5px 50px;
-    font-size: 35px;
-    color: rgb(0, 238, 255);
-    text-shadow: 2px 0 #fff, -2px 0 #fff, 0 2px #fff, 0 -2px #fff, 1px 1px #fff, -1px -1px #fff, 1px -1px #fff, -1px 1px #fff;
+    padding: 0px 50px;
+    font-size: 46px;
+    /* color: rgb(0, 238, 255); */
+    color: rgb(255, 38, 92);
+    text-shadow: 2px 0 #000, -2px 0 #fff, 0 2px #fff, 0 -2px #fff, 1px 1px #fff, -1px -1px #fff, 1px -1px #fff, -1px 1px #fff;
 }
 
 @media screen and (max-width: 350px) {
     #title {
-        font-size: 28px;
-        padding: 2px 30px;
+        font-size: 30px;
+        padding: 0px 30px;
     }
 }
 
-.content {
+.infos {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    margin-top: 50px;
+    width: 60%;
+}
+
+.infos-title {
+    margin: auto;
+    color: rgb(255, 38, 92);
+    font-size: 40px;
+    text-shadow: 2px 0 #000, -2px 0 #fff, 0 2px #fff, 0 -2px #fff, 1px 1px #fff, -1px -1px #fff, 1px -1px #fff, -1px 1px #fff;
+    border-bottom: solid 5px;
+    border-radius: 17px;
+}
+
+.infos-text {
+    margin: auto;
+    margin-top: 10px;
+    color: #fff;
+    font-size: 26px;
+    text-shadow: 1px 0 rgb(255, 80, 197);
+}
+
+.items {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr 200px;
     grid-template-rows: repeat(5, 1fr);
     grid-column-gap: 50px;
     grid-row-gap: 20px;
@@ -45,9 +71,7 @@ nav {
     margin-top: 50px;
     height: 500px;
     width: fit-content;
-    background-color: rgba(255, 255, 255, 0.5);
     align-items: center;
-    border-radius: 25px;
 }
 
 .div1 { grid-area: 1 / 1 / 2 / 2; }
@@ -61,16 +85,76 @@ nav {
 .div9 { grid-area: 5 / 1 / 6 / 2; }
 .div10 { grid-area: 5 / 2 / 6 / 3; }
 
+.best {
+    color: rgb(255, 38, 92);
+    font-weight: bold;
+    font-family: Poppins, sans-serif;
+    margin-right: 10px;
+}
+
 .item {
-    text-align: left;
-    padding-left: 15px;
-    font-size: 25px;
-    color: rgb(0, 238, 255);
+    text-align: center;
+    padding: 13px 30px;
+    font-size: 26px;
+    color: rgb(255, 80, 197);
     text-shadow: 2px 0 #fff, -2px 0 #fff, 0 2px #fff, 0 -2px #fff, 1px 1px #fff, -1px -1px #fff, 1px -1px #fff, -1px 1px #fff;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 25px;
 }
 
 .price {
     text-align: center;
-    padding-right: 15px;
-    font-size: 27px;
+    padding: 13px 30px;
+    font-size: 28px;
+    font-weight: bold;
+    color: rgb(0, 205, 219);
+    text-shadow: 2px 0 #fff, -2px 0 #fff, 0 2px #fff, 0 -2px #fff, 1px 1px #fff, -1px -1px #fff, 1px -1px #fff, -1px 1px #fff;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 25px;
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width: 60%;
+}
+
+.links-title {
+    margin: auto;
+    color: rgb(255, 38, 92);
+    font-size: 40px;
+    text-shadow: 2px 0 #000, -2px 0 #fff, 0 2px #fff, 0 -2px #fff, 1px 1px #fff, -1px -1px #fff, 1px -1px #fff, -1px 1px #fff;
+    border-bottom: solid 5px;
+    border-radius: 17px;
+}
+
+.links-text {
+    margin: auto;
+    margin-top: 10px;
+    color: #fff;
+    font-size: 26px;
+    text-shadow: 1px 0 rgb(255, 80, 197);
+}
+
+footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100px;
+    background-color: white;
+}
+
+.creator {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.github a{
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
 }
